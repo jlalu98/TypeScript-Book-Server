@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <base href="/"> -->
+  <link type="text/css"  rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link type="text/css" rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+  <title>BookStore| <%= title%></title>
+</head>
+<body>
+  <h1>BOOK STORE MANAGEMENT</h1>
+  <nav>
+   <a href="/create">Add a new book</a>
+  </nav>
+  <p>
+    <form class='search-area' action="/books" method="GET">
+      <input type="text" name="search" placeholder="Search....">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </p>
+  
+<br>
+  <div class="blogs">
+    <!-- inject blogs here from js -->
+    <% if(books.length > 0){ %>
+      <% books.forEach(book => { %>
+        <a style="text-decoration:none" href="/details/<%= book._id%>">
+          <div class="book-card" id="<%= book.id %>">
+          <br>
+          <img src="<%= book.cover%>" alt="<%=book.title%>" style="width:50%">
+          <h3><%=book.title%></h3>
+          <!-- <p style="text-align: center">Rating:<%=book.rating%></p> -->
+          <!-- <p style="text-align: center">Rating:<%=book.rating%></p> -->
+          <p style="text-align: center">Rating:<star-rating rating="<%=book.rating%>" maxLimit="10"></star-rating></p>
+          <p class="price" style="color:black"><strong>₹<%=book.price%></strong></p>
+          </div>
+          </a>
+        <% }) %>
+        <% } %>
+  </div>
+  <script src="/star.js"></script>
+
+</body>
+</html>

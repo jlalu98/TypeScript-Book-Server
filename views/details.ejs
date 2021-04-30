@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css"  rel="stylesheet" href="/styles.css">
+  <title>Book Details</title>
+</head>
+<body>
+    <nav>
+        <h1>BOOK STORE MANAGEMENT</h1>
+        <a href="/">HOME</a>
+    </nav><br><br>
+  
+  <div class="details">
+    <!-- inject blog details here -->
+    <div class="card">
+        <img src="<%= book.cover %>" alt="<%= book.title%>" style="width:20%">
+        <p><strong>Author:<%= book.author %></strong></p> 
+        <p><strong>Rating:<%= book.rating %></strong></p>
+        <p><strong>Genre :<%= book.tags %></strong><p>
+        <p><strong>Price :₹<%= book.price %></strong></p>
+        <h1><%= book.title%></h1>
+        <br>
+        <p style="text-align:justify"><strong><%= book.description %></strong></p>
+    </div>
+</div>
+  <button id='del-button' data-doc="<%= book._id %>">DELETE</button>
+  <script src="/details.js"></script>
+</body>
+</html>

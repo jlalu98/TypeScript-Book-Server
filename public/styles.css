@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* base styles */
+body {
+  background: #eee;
+  font-family: 'Roboto';
+  color: #444;
+  max-width: 960px;
+  margin: 100px auto;
+  padding: 10px;
+  background-image: url(8ba86017709af3482ba15c5a28ed1764.jpg);
+  background-size: cover;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav h1 {
+  margin: 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  background:black;
+  padding: 10px;
+  border-radius: 10px;
+}
+form {
+  max-width: 500px;
+}
+input, textarea {
+  display: block;
+  margin: 16px 0;
+  padding: 6px 10px;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-family: 'Roboto';
+}
+textarea {
+  min-height:50px;
+}
+.book-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  max-width: 300px;
+  height: 400px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  border-radius: 20px;
+  float:left;
+  color:#000;
+}
+.book-card:hover{
+  opacity: 0.5;
+}
+.card{
+  color:black;
+}
+
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+#del-button ,#add-button{
+  border: none;
+  border-radius: 20px;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 25%;
+  font-size: 10px;
+}
+
+
+#del-button:hover {
+  opacity: 0.7;
+}
+.inner{
+  overflow: hidden;
+  width:30px;
+
+  position: absolute;
+top: 0;
+left: 0;
+white-space: nowrap;
+
+width: 0;
+
+}
+.inner::before{
+  content: "\f005 \f005 \f005 \f005 \f005 ";
+  color: yellow;
+  
+}

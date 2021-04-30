@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title><%= title%></title>
+</head>
+<body>
+  <nav>
+    <h1>Add New Book Data</h1>
+    <a href="/">HOME</a>
+  </nav>
+  
+  
+
+  <form id='add-form' action="/books" method="POST">
+    <input type="text" name="title" required placeholder="Book title">
+    <input type="text" name="author" required placeholder="Author">
+    <input type="text" name="price" required placeholder="Price">
+    <input type="text" name="rating" required placeholder="Rating">
+    <input type="text" name="genere" required placeholder="Genre">
+    <textarea name="description" required placeholder="Description"></textarea>
+    <input type="text" name="cover" required placeholder="cover">
+    <button id="add-button" type="submit">ADD</button>
+  </form>
+
+  <!-- <script src="js/create.js"></script> -->
+</body>
+</html>
